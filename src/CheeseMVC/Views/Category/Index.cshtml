@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model List<CheeseMVC.Models.CheeseCategory>
+
+
+<h2>Index</h2>
+@{ /*Adding Navigation Links*/}
+
+<p><a asp-controller="Category" asp-action="Add">Add Category</a></p>
+<ul>
+    @foreach (var category in Model)
+    {
+        <li>@category.Name</li>
+    }
+</ul>
